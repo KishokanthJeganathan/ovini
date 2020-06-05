@@ -1,4 +1,4 @@
-// Mapping the links from this component helps me control my links
+// Mapping the links from this component helps me control links
 
 export default [
 	{ path: '/', text: 'HOME' },

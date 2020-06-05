@@ -30,7 +30,7 @@ export default function Home() {
 			<BackgroundImage
 				fluid={backgroundImage}
 				style={{
-					height: '102vh',
+					height: '100vh',
 					width: '100%',
 					marginTop: '-3rem',
 					zIndex: '-1',
