@@ -8,10 +8,10 @@ export default function contact() {
 		<Layout>
 			<Col>
 				<Row>
-					<Col xs={12} md={6}>
+					<Col xs={12} sm={6}>
 						image
 					</Col>
-					<Col md={6}>
+					<Col sm={6}>
 						<form action="https://formspree.io/kishokanthjeganathan@gmail.com" method="POST">
 							<label htmlFor="first name">Your Name</label> <br />
 							<input type="text" name="first name" aria-label="first name" className={styles.input} />
@@ -21,13 +21,7 @@ export default function contact() {
 							<label htmlFor="subject">Subject</label> <br />
 							<input type="text" name="subject" aria-label="subject" className={styles.input} /> <br />
 							<label htmlFor="messege">Message</label> <br />
-							<textarea
-								name="messege"
-								rows="4"
-								cols="40"
-								aria-label="message"
-								className={styles.input}
-							/>{' '}
+							<textarea name="messege" rows="4" aria-label="message" className={styles.input} />
 							<br />
 							<input type="submit" value="Send" aria-label="send" />
 						</form>
