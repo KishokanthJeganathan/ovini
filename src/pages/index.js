@@ -1,5 +1,4 @@
 import React from 'react';
-import { Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Layout from '../components/layout/Layout';
 import BackgroundImage from 'gatsby-background-image';
