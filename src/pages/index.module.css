@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Rokkitt:wght@400;500;600&display=swap');
+.brand {
+	color: white;
+	padding-left: 1rem;
+	font-family: 'Rokkitt', serif;
+	font-size: 3rem;
+	font-weight: 400;
+}
+
+.ovini {
+	font-size: 5rem;
+}

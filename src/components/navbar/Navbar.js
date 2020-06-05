@@ -16,12 +16,7 @@ export default function Navbar() {
 				<Row>
 					<Col className={styles.fullscreenNav}>
 						<Row>
-							<Col>
-								<Link to="/" className={styles.brand}>
-									OVINI - Haute Couture
-								</Link>
-							</Col>
-							<Col sm={8}>
+							<Col sm={12}>
 								<nav>
 									<ul className={styles.fullscreenNavUl}>
 										{Links.map((link) => (
@@ -39,12 +34,7 @@ export default function Navbar() {
 					{/* code in the below Col handles everything to do with the navbar when under 768 px */}
 					<Col className={styles.mobileNav}>
 						<Row className={styles.mobileNavRow}>
-							<Col xs={10} className={styles.mobileBrandHolder}>
-								<Link to="/" className={styles.brand}>
-									OVINI - Haute Couture
-								</Link>
-							</Col>
-							<Col xs={2} className={styles.hamburgerHolder}>
+							<Col xs={12} className={styles.hamburgerHolder}>
 								<GiHamburgerMenu className={styles.hamburgerMenu} onClick={() => setActive(!active)} />
 								<nav
 									// I opted to use inline styles here to make sure I could change the transform property with the active state. Might not be pretty but it got the job done
