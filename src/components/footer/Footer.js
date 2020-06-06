@@ -5,7 +5,7 @@ import FooterLinks from '../../constants/FooterLinks';
 import { v4 as uuidv4 } from 'uuid';
 import { Link } from 'gatsby';
 
-export default function Footer() {
+export default function Footer({ textColor }) {
 	return (
 		<footer className={styles.footer}>
 			<Row>
@@ -13,7 +13,7 @@ export default function Footer() {
 					<ul className={styles.ul}>
 						{FooterLinks.map((link) => (
 							<li className={styles.li} key={uuidv4()}>
-								<Link className={styles.link} to={link.path}>
+								<Link className={styles.link} to={link.path} style={{ color: `${textColor}` }}>
 									{link.text}
 								</Link>
 							</li>
@@ -22,11 +22,17 @@ export default function Footer() {
 				</Col>
 				<Col xs={12}>
 					<p className={styles.email}>
-						<a href="mailto:hello@ovini.com" className={styles.emailAddress}>
+						<a
+							href="mailto:hello@ovini.com"
+							className={styles.emailAddress}
+							style={{ color: `${textColor}` }}
+						>
 							hello@ovini.com
 						</a>
 					</p>
-					<p className={styles.phone}>+48 608656435</p>
+					<p className={styles.phone} style={{ color: `${textColor}` }}>
+						+48 608656435
+					</p>
 				</Col>
 			</Row>
 		</footer>

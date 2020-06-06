@@ -7,21 +7,25 @@ import { v4 as uuidv4 } from 'uuid';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Col, Row } from 'react-bootstrap';
 
-export default function Navbar() {
+export default function Navbar({ textColor, BgColor }) {
 	const [ active, setActive ] = useState(false);
 
 	return (
 		<header>
 			<Col>
 				<Row>
-					<Col className={styles.fullscreenNav}>
+					<Col className={styles.fullscreenNav} style={{ backgroundColor: `${BgColor}` }}>
 						<Row>
 							<Col sm={12}>
 								<nav>
 									<ul className={styles.fullscreenNavUl}>
 										{Links.map((link) => (
 											<li className={styles.fullscreenNavLi} key={uuidv4()}>
-												<Link className={styles.fullscreenNavLink} to={link.path}>
+												<Link
+													className={styles.fullscreenNavLink}
+													to={link.path}
+													style={{ color: `${textColor}` }}
+												>
 													{link.text}
 												</Link>
 											</li>
