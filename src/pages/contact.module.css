@@ -1,27 +1,70 @@
+.contact {
+	z-index: -1;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+	background-color: #eeeff4;
+	border: 1px solid #d1d1d1;
+}
+
+label {
+	font-size: 0.8rem;
+	font-weight: 400;
+}
+
+.btn {
+	background-color: black;
+	color: white;
+	border: none;
+	font-size: 0.8rem;
+	font-weight: 400;
+}
+.btn:hover {
+	background-color: white;
+	color: black;
+	border: 1px solid black;
+}
+
+.contact-content-holder {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 80vh;
+}
+
 @media only screen and (max-device-width: 576px) {
-	.input {
+	.input,
+	.invite {
 		width: 100%;
+		font-size: 0.8rem;
 	}
 }
 @media only screen and (min-device-width: 577px) and (max-device-width: 768px) {
-	.input {
+	.input,
+	.invite {
 		width: 100%;
+		font-size: 0.8rem;
 	}
 }
 @media only screen and (min-device-width: 769px) and (max-device-width: 992px) {
-	.input {
+	.input,
+	.invite {
 		width: 80%;
 	}
 }
 
 @media only screen and (min-device-width: 992px) and (max-device-width: 1300px) {
-	.input {
+	.input,
+	.invite {
 		width: 80%;
 	}
 }
 
 @media only screen and (min-device-width: 1300px) {
-	.input {
+	.input,
+	.invite {
 		width: 80%;
 	}
 }

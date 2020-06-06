@@ -2,28 +2,52 @@ import React from 'react';
 import Layout from '../components/layout/Layout';
 import { Col, Row } from 'react-bootstrap';
 import styles from '../pages/contact.module.css';
+import Img from 'gatsby-image';
+import { graphql, useStaticQuery } from 'gatsby';
 
-export default function contact() {
+const query = graphql`
+	query {
+		contentfulContactPageImage {
+			image {
+				fluid {
+					...GatsbyContentfulFluid
+				}
+				title
+			}
+		}
+	}
+`;
+
+export default function Contact() {
+	const data = useStaticQuery(query);
+
 	return (
 		<Layout>
-			<Col>
-				<Row>
-					<Col xs={12} sm={6}>
-						image
+			<Col className={styles.contact}>
+				<Row className={styles.contactContentHolder}>
+					<Col xs={12} sm={7} md={5}>
+						<Img
+							fluid={data.contentfulContactPageImage.image.fluid}
+							alt={data.contentfulContactPageImage.title}
+						/>
 					</Col>
-					<Col sm={6}>
+					<Col sm={5} md={5} className={styles.formHolder}>
+						<p className={styles.invite}>
+							TO REQUEST FOR A CUSTOM ORDER OR COMMISSION-BASED PIECES, INQUIRE ABOUT A COLLABORATION, OR
+							SIMPLY SAY HELLO, FILL IN THE FORM BELOW.
+						</p>
 						<form action="https://formspree.io/kishokanthjeganathan@gmail.com" method="POST">
-							<label htmlFor="first name">Your Name</label> <br />
+							<label htmlFor="first name">NAME</label> <br />
 							<input type="text" name="first name" aria-label="first name" className={styles.input} />
 							<br />
-							<label htmlFor="email">Where can I reach you?</label> <br />
+							<label htmlFor="email">WHERE CAN I REACH YOU?</label> <br />
 							<input type="email" name="email" aria-label="email" className={styles.input} /> <br />
-							<label htmlFor="subject">Subject</label> <br />
+							<label htmlFor="subject">SUBJECT</label> <br />
 							<input type="text" name="subject" aria-label="subject" className={styles.input} /> <br />
-							<label htmlFor="messege">Message</label> <br />
+							<label htmlFor="messege">MESSAGE</label> <br />
 							<textarea name="messege" rows="4" aria-label="message" className={styles.input} />
 							<br />
-							<input type="submit" value="Send" aria-label="send" />
+							<input type="submit" value="Send" aria-label="send" className={styles.btn} />
 						</form>
 					</Col>
 				</Row>
