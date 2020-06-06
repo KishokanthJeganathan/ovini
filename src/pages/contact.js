@@ -25,13 +25,13 @@ export default function Contact() {
 		<Layout>
 			<Col className={styles.contact}>
 				<Row className={styles.contactContentHolder}>
-					<Col xs={12} sm={7} md={5}>
+					<Col xs={12} sm={7} md={7} lg={5}>
 						<Img
 							fluid={data.contentfulContactPageImage.image.fluid}
 							alt={data.contentfulContactPageImage.title}
 						/>
 					</Col>
-					<Col sm={5} md={5} className={styles.formHolder}>
+					<Col sm={5} md={5} g={5} className={styles.formHolder}>
 						<p className={styles.invite}>
 							TO REQUEST FOR A CUSTOM ORDER OR COMMISSION-BASED PIECES, INQUIRE ABOUT A COLLABORATION, OR
 							SIMPLY SAY HELLO, FILL IN THE FORM BELOW.
