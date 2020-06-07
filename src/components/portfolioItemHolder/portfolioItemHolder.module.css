@@ -19,6 +19,10 @@
 	font-size: 3rem;
 }
 
+.link:hover {
+	text-decoration: none;
+}
+
 @media only screen and (min-device-width: 576px) {
 	.portfolio-name-holder {
 		padding-left: 1rem;

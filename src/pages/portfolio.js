@@ -28,7 +28,7 @@ export default function Portfolio() {
 			<Col>
 				<Row className={styles.portfolio}>
 					{data.allContentfulPortfolioItems.nodes.map((node) => (
-						<PortfolioItemHolder name={node.name} image={node.image.fluid} />
+						<PortfolioItemHolder name={node.name} image={node.image.fluid} slug={node.name} />
 					))}
 				</Row>
 			</Col>
