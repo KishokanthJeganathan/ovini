@@ -1,8 +1,4 @@
-/* .background {
-	background-color: black;
-	height: 100vh;
-	margin-top: -3rem;
-	z-index: -1;
-} */
-
-/* think about passing color of navbar to layout and then so that you can change navbar text color and background as you wish on individual pages */
+.portfolio-holder {
+	display: flex;
+	justify-content: center;
+}

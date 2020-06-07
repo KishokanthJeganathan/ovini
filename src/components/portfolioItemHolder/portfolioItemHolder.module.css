@@ -1,0 +1,26 @@
+.portfolio-item-holder {
+	display: flex;
+	justify-content: center;
+	color: white;
+	align-items: center;
+	margin: 2rem 0rem;
+}
+
+.portfolio-item-image {
+	padding: 0;
+}
+
+.portfolio-name-holder {
+	margin-top: 1rem;
+	padding: 0;
+}
+
+.portfolio-name {
+	font-size: 3rem;
+}
+
+@media only screen and (min-device-width: 576px) {
+	.portfolio-name-holder {
+		padding-left: 1rem;
+	}
+}

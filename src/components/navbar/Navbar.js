@@ -39,12 +39,16 @@ export default function Navbar({ textColor, BgColor }) {
 					<Col className={styles.mobileNav}>
 						<Row className={styles.mobileNavRow}>
 							<Col xs={10} className={styles.mobileBrandHolder}>
-								<Link to="/" className={styles.brand}>
+								<Link to="/" className={styles.brand} style={{ color: `${textColor}` }}>
 									OVINI
 								</Link>
 							</Col>
 							<Col xs={2} className={styles.hamburgerHolder}>
-								<GiHamburgerMenu className={styles.hamburgerMenu} onClick={() => setActive(!active)} />
+								<GiHamburgerMenu
+									className={styles.hamburgerMenu}
+									onClick={() => setActive(!active)}
+									style={{ color: `${textColor}` }}
+								/>
 								<nav
 									// I opted to use inline styles here to make sure I could change the transform property with the active state. Might not be pretty but it got the job done
 									style={{

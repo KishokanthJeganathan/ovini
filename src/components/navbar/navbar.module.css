@@ -97,6 +97,10 @@
 	font-size: 2rem;
 }
 
+.mobile-nav {
+	z-index: 1;
+}
+
 .mobile-nav-row {
 	display: flex;
 	justify-content: space-between;
