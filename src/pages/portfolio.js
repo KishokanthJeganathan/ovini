@@ -4,6 +4,7 @@ import styles from '../pages/portfolio.module.css';
 import { graphql, useStaticQuery } from 'gatsby';
 import PortfolioItemHolder from '../components/portfolioItemHolder/PortfolioItemHolder';
 import { Col, Row } from 'react-bootstrap';
+import { v4 as uuidv4 } from 'uuid';
 
 const query = graphql`
 	query {
@@ -28,7 +29,12 @@ export default function Portfolio() {
 			<Col>
 				<Row className={styles.portfolio}>
 					{data.allContentfulPortfolioItems.nodes.map((node) => (
-						<PortfolioItemHolder name={node.name} image={node.image.fluid} slug={node.name} />
+						<PortfolioItemHolder
+							name={node.name}
+							image={node.image.fluid}
+							slug={node.name}
+							key={uuidv4()}
+						/>
 					))}
 				</Row>
 			</Col>
