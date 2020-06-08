@@ -2,6 +2,6 @@
 
 export default [
 	{ path: '/', text: 'HOME' },
-	{ path: '/portfolio', text: 'COLLECTION' },
+	{ path: '/portfolio', text: 'PORTFOLIO' },
 	{ path: '/blog', text: 'EDITORIALS' }
 ];
