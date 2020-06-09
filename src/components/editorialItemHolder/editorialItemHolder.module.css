@@ -1,0 +1,38 @@
+.row {
+	display: flex;
+	justify-content: center;
+}
+
+.name-holder {
+	color: white;
+	display: flex;
+	align-items: center;
+}
+
+@media only screen and (max-device-width: 576px) {
+	.row {
+		padding-top: 2rem;
+	}
+}
+@media only screen and (min-device-width: 577px) and (max-device-width: 768px) {
+	.row {
+		padding: 2rem;
+	}
+}
+@media only screen and (min-device-width: 769px) and (max-device-width: 992px) {
+	.row {
+		padding: 2rem;
+	}
+}
+
+@media only screen and (min-device-width: 992px) and (max-device-width: 1300px) {
+	.row {
+		padding: 2rem;
+	}
+}
+
+@media only screen and (min-device-width: 1300px) {
+	.row {
+		padding: 3rem;
+	}
+}

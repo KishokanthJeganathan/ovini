@@ -3,5 +3,5 @@
 export default [
 	{ path: '/', text: 'HOME' },
 	{ path: '/portfolio', text: 'PORTFOLIO' },
-	{ path: '/blog', text: 'EDITORIALS' }
+	{ path: '/editorials', text: 'EDITORIALS' }
 ];
