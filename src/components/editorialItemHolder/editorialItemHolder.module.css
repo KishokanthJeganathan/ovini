@@ -3,6 +3,10 @@
 	justify-content: center;
 }
 
+.link:hover {
+	text-decoration: none;
+}
+
 .name-holder {
 	color: white;
 	display: flex;

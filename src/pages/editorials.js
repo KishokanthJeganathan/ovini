@@ -11,6 +11,7 @@ const query = graphql`
 	query {
 		allContentfulEditorialItems {
 			nodes {
+				slug
 				name: nameOfEditorialItem
 				coverPicture: coverPictureOfEditorialItem {
 					fluid {
@@ -24,12 +25,11 @@ const query = graphql`
 
 export default function Editorials() {
 	const data = useStaticQuery(query);
-	console.log(data);
 	return (
 		<Layout BgColor="black" textColor="white">
 			<Col className={styles.editorials}>
 				{data.allContentfulEditorialItems.nodes.map((item) => (
-					<EditorialItemHolder src={item.coverPicture.fluid} name={item.name} />
+					<EditorialItemHolder src={item.coverPicture.fluid} name={item.name} slug={item.slug} />
 				))}
 			</Col>
 		</Layout>
