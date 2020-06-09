@@ -4,7 +4,6 @@ import Layout from '../layout/Layout';
 import { Col, Row } from 'react-bootstrap';
 import styles from '../templates/portfolioItemPage.module.css';
 import Img from 'gatsby-image';
-import BackgroundImage from 'gatsby-background-image';
 
 export const query = graphql`
 	query($slug: String) {
