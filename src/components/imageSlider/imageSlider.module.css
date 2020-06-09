@@ -1,0 +1,10 @@
+.images {
+	height: 80vh;
+	background-position: bottom center;
+	background-repeat: repeat-y;
+	background-size: cover;
+}
+.row {
+	height: 90vh;
+	width: 80vw;
+}
