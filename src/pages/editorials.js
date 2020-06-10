@@ -2,7 +2,6 @@ import React from 'react';
 import styles from '../pages/editorials.module.css';
 import Layout from '../components/layout/Layout';
 import { Col, Row } from 'react-bootstrap';
-import { v4 as uuidv4 } from 'uuid';
 
 import { graphql, useStaticQuery } from 'gatsby';
 import EditorialItemHolder from '../components/editorialItemHolder/EditorialItemHolder';
