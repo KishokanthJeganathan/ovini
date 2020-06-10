@@ -24,13 +24,16 @@ export default function EditorialItemPage({ data }) {
 
 	const { imagesForFullEditorial, nameOfEditorialItem } = data.contentfulEditorialItems;
 	return (
-		<Layout>
+		<Layout BgColor="black" textColor="white">
 			<Col xs={12} className={styles.editorialItemPage}>
-				<Row>
+				<Row className={styles.editorialItemPageRow}>
 					<Col xs={12} className={styles.h1Holder}>
-						<h1 className={styles.h1}>{nameOfEditorialItem.toUpperCase()} EDITORIAL</h1>
+						<h1 className={styles.h1}>{nameOfEditorialItem.toUpperCase()}</h1>
 					</Col>
-					<ImageSlider images={imagesForFullEditorial} />
+					<Col xs={12} className={styles.swipe}>
+						<p>SWIPE THE PAGES</p>
+					</Col>
+					<ImageSlider images={imagesForFullEditorial} name={nameOfEditorialItem} />
 				</Row>
 			</Col>
 		</Layout>

@@ -4,47 +4,19 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Img from 'gatsby-image';
 import styles from '../imageSlider/imageSlider.module.css';
-import { Col, Row } from 'react-bootstrap';
+import { Col, Row, Carousel } from 'react-bootstrap';
 import { v4 as uuidv4 } from 'uuid';
 
 export default function ImageSlider({ images }) {
-	const settings = {
-		autoplay: true,
-		autoplaySpeed: 3000,
-		arrows: true,
-		infinite: true,
-		speed: 500,
-		swipeToSlide: true,
-		adaptiveHeight: true,
-		dots: true,
-
-		responsive: [
-			{
-				breakpoint: 2500,
-				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 2,
-					initialSlide: 2
-				}
-			},
-			{
-				breakpoint: 700,
-				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1
-				}
-			}
-		]
-	};
 	return (
 		<Col className={styles.row} xs={12}>
-			<Slider {...settings}>
+			<Carousel xs={12} className={styles.carousal} indicators={false} fade={true}>
 				{images.map((image) => (
-					<div>
-						<Img fluid={image.fluid} className={styles.images} key={uuidv4()} />
-					</div>
+					<Carousel.Item>
+						<Img fluid={image.fluid} className={styles.images} />
+					</Carousel.Item>
 				))}
-			</Slider>
+			</Carousel>
 		</Col>
 	);
 }

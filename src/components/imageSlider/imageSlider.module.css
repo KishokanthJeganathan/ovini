@@ -1,56 +1,54 @@
 .images {
-	height: 90vh;
+	width: 50vw;
 }
 .row {
-	height: 100vh;
-	width: 80vw;
+	width: 30vw;
+	display: flex;
+	justify-content: center;
+}
+
+.h1 {
+	margin-top: 2rem;
+	font-size: 1.5rem;
+	color: white;
+}
+
+.h1-holder {
+	display: flex;
+	justify-content: center;
 }
 
 @media only screen and (max-device-width: 320px) {
 	.images {
-		height: 100vh;
-		width: 145vw;
-	}
-
-	.row {
-		height: 100vh;
+		width: 90vw;
 	}
 }
 
 @media only screen and (min-device-width: 321px) and (max-device-width: 576px) {
 	.images {
-		height: 100vh;
-		width: 115vw;
-	}
-
-	.row {
-		height: 100vh;
+		width: 80vw;
 	}
 }
 
 @media only screen and (min-device-width: 577px) and (max-device-width: 768px) {
 	.images {
-		height: 90vh;
-		width: 80vw;
+		width: 70vw;
 	}
 }
 @media only screen and (min-device-width: 769px) and (max-device-width: 992px) {
 	.images {
-		height: 100vh;
-		width: 60vw;
+		width: 50vw;
 	}
 }
 
 @media only screen and (min-device-width: 992px) and (max-device-width: 1300px) {
 	.images {
-		height: 100vh;
-		width: 45vw;
+		width: 40vw;
 	}
 }
 
 @media only screen and (min-device-width: 1300px) {
 	.images {
-		height: 100vh;
-		width: 50vw;
+		width: 35vw;
 	}
 }
