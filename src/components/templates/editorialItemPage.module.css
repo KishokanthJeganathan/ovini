@@ -17,6 +17,10 @@
 	text-align: center;
 }
 
+.p {
+	margin: 0;
+}
+
 .h1-holder {
 	display: flex;
 	justify-content: center;

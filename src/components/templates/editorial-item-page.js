@@ -31,7 +31,10 @@ export default function EditorialItemPage({ data }) {
 						<h1 className={styles.h1}>{nameOfEditorialItem.toUpperCase()}</h1>
 					</Col>
 					<Col xs={12} className={styles.swipe}>
-						<p>SWIPE THE PAGES</p>
+						<p className={styles.p}>SWIPE THE PAGES. </p>
+					</Col>
+					<Col xs={12} className={styles.swipe}>
+						<p>HOVER TO PAUSE </p>
 					</Col>
 					<ImageSlider images={imagesForFullEditorial} name={nameOfEditorialItem} />
 				</Row>
