@@ -17,6 +17,7 @@ export default function ImageSlider({ images }) {
 		swipeToSlide: true,
 		adaptiveHeight: true,
 		dots: true,
+
 		responsive: [
 			{
 				breakpoint: 2500,
@@ -27,7 +28,7 @@ export default function ImageSlider({ images }) {
 				}
 			},
 			{
-				breakpoint: 600,
+				breakpoint: 700,
 				settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1
