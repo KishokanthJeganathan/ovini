@@ -1,0 +1,27 @@
+/* .product-slider {
+	display: flex;
+} */
+
+.slider-holder {
+	display: flex;
+	justify-content: center;
+}
+
+.btn {
+	outline: none;
+	background-color: black;
+	cursor: pointer;
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 0rem 3rem;
+}
+
+.button-group {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
