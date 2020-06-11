@@ -1,9 +1,10 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../layout/Layout';
-import { Col, Row } from 'react-bootstrap';
+import { Col, Row, Carousel } from 'react-bootstrap';
 import styles from '../templates/editorialItemPage.module.css';
-import ImageSlider from '../imageSlider/ImageSlider';
+import Img from 'gatsby-image';
+import { v4 as uuidv4 } from 'uuid';
 
 export const query = graphql`
 	query($slug: String) {
@@ -36,7 +37,15 @@ export default function EditorialItemPage({ data }) {
 					<Col xs={12} className={styles.swipe}>
 						<p>HOVER TO PAUSE </p>
 					</Col>
-					<ImageSlider images={imagesForFullEditorial} name={nameOfEditorialItem} />
+					<Col className={styles.row} xs={12}>
+						<Carousel xs={12} className={styles.carousal} indicators={false} fade={true}>
+							{imagesForFullEditorial.map((image) => (
+								<Carousel.Item key={uuidv4()}>
+									<Img fluid={image.fluid} className={styles.images} />
+								</Carousel.Item>
+							))}
+						</Carousel>
+					</Col>
 				</Row>
 			</Col>
 		</Layout>

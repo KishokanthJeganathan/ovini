@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import styles from '../navbar/navbar.module.css';
 import { Link } from 'gatsby';
-import { GiCancel, GiHamburgerMenu } from 'react-icons/Gi';
+import { GiCancel } from 'react-icons/Gi';
+import { AiOutlineMenu } from 'react-icons/Ai';
+
 import Links from '../../constants/Links';
 import { v4 as uuidv4 } from 'uuid';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -44,7 +46,7 @@ export default function Navbar({ textColor, BgColor }) {
 								</Link>
 							</Col>
 							<Col xs={2} className={styles.hamburgerHolder}>
-								<GiHamburgerMenu
+								<AiOutlineMenu
 									className={styles.hamburgerMenu}
 									onClick={() => setActive(!active)}
 									style={{ color: `${textColor}` }}
