@@ -6,4 +6,13 @@
 .magazine {
 	border: 1px solid black;
 	height: 80vh;
+	padding: 0;
+	margin: 1rem;
+}
+
+@media only screen and (min-device-width: 1300px) {
+	.magazine {
+		border: 1px solid black;
+		height: 88vh;
+	}
 }

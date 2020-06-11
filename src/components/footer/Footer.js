@@ -33,6 +33,17 @@ export default function Footer({ textColor }) {
 					<p className={styles.phone} style={{ color: `${textColor}` }}>
 						+48 608656435
 					</p>
+					<p className={styles.phone} style={{ color: `${textColor}` }}>
+						<a
+							href="https://www.kishokanth.com/"
+							className={styles.emailAddress}
+							style={{ color: `${textColor}` }}
+							target="blank"
+							rel="noopener noreferrer"
+						>
+							Design and Code by Kishokanth
+						</a>
+					</p>
 				</Col>
 			</Row>
 		</footer>

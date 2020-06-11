@@ -5,6 +5,7 @@ import BackgroundImage from 'gatsby-background-image';
 import styles from '../pages/index.module.css';
 import { Col, Row } from 'react-bootstrap';
 import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 
 const query = graphql`
 	query {
@@ -27,11 +28,24 @@ export default function Home() {
 		<Layout>
 			<Col>
 				<Row className={styles.magazineHolder}>
-					<Col xs={11} sm={5} className={styles.magazine}>
-						Hello
+					<Col xs={12} sm={7} lg={5} className={styles.magazine}>
+						<BackgroundImage
+							fluid={data.allContentfulHomePageBackground.nodes[0].backgroundImage.fluid}
+							className={styles.backgroundImage}
+							style={{ height: '100%' }}
+						/>
 					</Col>
 				</Row>
 			</Col>
 		</Layout>
 	);
+}
+{
+	/* <BackgroundImage
+							fluid={data.allContentfulHomePageBackground.nodes[0].backgroundImage.fluid}
+							className={styles.backgroundImage}
+							style={{ height: '90vh' }}
+						>
+							Hello
+						</BackgroundImage>  */
 }
