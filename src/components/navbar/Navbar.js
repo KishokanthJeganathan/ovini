@@ -6,6 +6,7 @@ import Links from '../../constants/Links';
 import { v4 as uuidv4 } from 'uuid';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Col, Row } from 'react-bootstrap';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 export default function Navbar({ textColor, BgColor }) {
 	const [ active, setActive ] = useState(false);
@@ -21,13 +22,17 @@ export default function Navbar({ textColor, BgColor }) {
 									<ul className={styles.fullscreenNavUl}>
 										{Links.map((link) => (
 											<li className={styles.fullscreenNavLi} key={uuidv4()}>
-												<Link
+												<AniLink
+													duration={1}
 													className={styles.fullscreenNavLink}
+													swipe
+													top="entry"
+													entryOffset={100}
 													to={link.path}
 													style={{ color: `${textColor}` }}
 												>
 													{link.text}
-												</Link>
+												</AniLink>
 											</li>
 										))}
 									</ul>

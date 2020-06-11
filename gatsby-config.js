@@ -13,6 +13,7 @@ module.exports = {
 	plugins: [
 		`gatsby-plugin-sharp`,
 		`gatsby-transformer-sharp`,
+		`gatsby-plugin-transition-link`,
 		{
 			resolve: `gatsby-source-contentful`,
 			options: {

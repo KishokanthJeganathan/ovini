@@ -4,6 +4,7 @@ import { Row, Col } from 'react-bootstrap';
 import FooterLinks from '../../constants/FooterLinks';
 import { v4 as uuidv4 } from 'uuid';
 import { Link } from 'gatsby';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 export default function Footer({ textColor }) {
 	return (
@@ -13,9 +14,17 @@ export default function Footer({ textColor }) {
 					<ul className={styles.ul}>
 						{FooterLinks.map((link) => (
 							<li className={styles.li} key={uuidv4()}>
-								<Link className={styles.link} to={link.path} style={{ color: `${textColor}` }}>
+								<AniLink
+									duration={1}
+									swipe
+									top="entry"
+									entryOffset={100}
+									className={styles.link}
+									to={link.path}
+									style={{ color: `${textColor}` }}
+								>
 									{link.text}
-								</Link>
+								</AniLink>
 							</li>
 						))}
 					</ul>
