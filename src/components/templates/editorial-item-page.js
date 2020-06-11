@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../layout/Layout';
 import { Col, Row, Carousel } from 'react-bootstrap';
@@ -21,9 +21,8 @@ export const query = graphql`
 `;
 
 export default function EditorialItemPage({ data }) {
-	console.log(data);
-
 	const { imagesForFullEditorial, nameOfEditorialItem } = data.contentfulEditorialItems;
+
 	return (
 		<Layout BgColor="black" textColor="white">
 			<Col xs={12} className={styles.editorialItemPage}>

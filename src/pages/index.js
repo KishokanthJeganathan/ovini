@@ -5,7 +5,6 @@ import BackgroundImage from 'gatsby-background-image';
 import styles from '../pages/index.module.css';
 import { Col, Row } from 'react-bootstrap';
 import { graphql, useStaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
 
 const query = graphql`
 	query {
