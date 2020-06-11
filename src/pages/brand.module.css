@@ -1,0 +1,10 @@
+.content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 90vh;
+}
+
+p {
+	line-height: 1.2rem;
+}

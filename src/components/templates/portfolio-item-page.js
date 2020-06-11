@@ -4,6 +4,7 @@ import Layout from '../layout/Layout';
 import { Col, Row } from 'react-bootstrap';
 import styles from '../templates/portfolioItemPage.module.css';
 import Img from 'gatsby-image';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 export const query = graphql`
 	query($slug: String) {
@@ -118,7 +119,16 @@ export default function portfolioItemPage({ data }) {
 									<br />
 									Interested?
 								</p>
-								<Link className={styles.CTALink}>Let's talk</Link>
+								<AniLink
+									className={styles.CTALink}
+									duration={1}
+									swipe
+									top="entry"
+									entryOffset={100}
+									to="contact"
+								>
+									Let's talk
+								</AniLink>
 							</Col>
 						</Row>
 					</Col>

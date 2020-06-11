@@ -3,6 +3,6 @@
 export default [
 	{ path: '/brand', text: 'BRAND' },
 	{ path: '/sizing', text: 'SIZING' },
-	{ path: '/shipping', text: 'DELIVERIES' },
+	{ path: '/shipping', text: 'SHIPPING' },
 	{ path: '/contact', text: 'CONTACT' }
 ];

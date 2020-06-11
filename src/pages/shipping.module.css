@@ -1,0 +1,11 @@
+.shipping-content-holder {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 90vh;
+	margin-top: 1rem;
+}
+
+.h1 {
+	font-size: 4rem;
+}
