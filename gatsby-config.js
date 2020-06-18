@@ -10,7 +10,17 @@ require('dotenv').config({
 
 module.exports = {
 	/* Your site config here */
+	siteMetadata: {
+		title: 'Ovini',
+		titleTemplate: '%s | ovini.com',
+		description: 'Welcome to Ovini, an independent fashion label based in Melbourne, Australia',
+		siteUrl: 'https://ovini.netlify.app', // No trailing slash allowed!
+		image: 'https://i.ibb.co/Rc0rDCs/Ovini-com.jpg',
+		twitterUsername: '@kishojegan',
+		author: 'Kishokanth Jeganathan'
+	},
 	plugins: [
+		`gatsby-plugin-react-helmet`,
 		`gatsby-plugin-sharp`,
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-transition-link`,
