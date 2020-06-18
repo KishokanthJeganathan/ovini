@@ -4,6 +4,7 @@ import { Col, Row } from 'react-bootstrap';
 import styles from '../pages/contact.module.css';
 import Img from 'gatsby-image';
 import { graphql, useStaticQuery } from 'gatsby';
+import Seo from '../components/Seo';
 
 const query = graphql`
 	query {
@@ -15,14 +16,23 @@ const query = graphql`
 				title
 			}
 		}
+		allContentfulContactPageImage {
+			nodes {
+				metaDescription
+				metaImageLink
+			}
+		}
 	}
 `;
 
 export default function Contact() {
 	const data = useStaticQuery(query);
 
+	const { metaDescription, metaImageLink } = data.allContentfulContactPageImage.nodes[0];
+
 	return (
 		<Layout>
+			<Seo title="Contact Us" description={metaDescription} image={metaImageLink} />
 			<Col className={styles.contact}>
 				<Row className={styles.contactContentHolder}>
 					<Col xs={12} sm={7} md={7} lg={5}>

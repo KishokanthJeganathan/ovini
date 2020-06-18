@@ -3,6 +3,7 @@ import Layout from '../components/layout/Layout';
 import { Col, Row } from 'react-bootstrap';
 import styles from '../pages/shipping.module.css';
 import { graphql, useStaticQuery } from 'gatsby';
+import Seo from '../components/Seo';
 
 const query = graphql`
 	query MyQuery {
@@ -15,14 +16,23 @@ const query = graphql`
 				}
 			}
 		}
+		allContentfulShippingPageMeta {
+			nodes {
+				metaDescription
+				metaImageLink
+			}
+		}
 	}
 `;
 
 export default function Shipping() {
 	const data = useStaticQuery(query);
 
+	const { metaDescription, metaImageLink } = data.allContentfulShippingPageMeta.nodes[0];
+
 	return (
 		<Layout>
+			<Seo title="Shipping" description={metaDescription} image={metaImageLink} />
 			<Col>
 				<Row className={styles.shippingContentHolder}>
 					<Col xs={11} sm={6} md={5}>

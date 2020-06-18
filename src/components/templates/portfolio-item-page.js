@@ -5,10 +5,14 @@ import { Col, Row } from 'react-bootstrap';
 import styles from '../templates/portfolioItemPage.module.css';
 import Img from 'gatsby-image';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import Seo from '../Seo';
 
 export const query = graphql`
 	query($slug: String) {
 		contentfulPortfolioItems(slug: { eq: $slug }) {
+			metaDescription
+			metaImageLink
+			nameOfPortfolioItem
 			portfolioPageImage1 {
 				fluid {
 					...GatsbyContentfulFluid
@@ -65,7 +69,6 @@ export const query = graphql`
 	}
 `;
 export default function portfolioItemPage({ data }) {
-	console.log(data);
 	const {
 		callToAction,
 		portfolioPageAboutPortfolio,
@@ -76,11 +79,19 @@ export default function portfolioItemPage({ data }) {
 		portfolioPageImage5,
 		portfolioPageImage6,
 		portfolioPageImage7,
-		portfolioPageImage8
+		portfolioPageImage8,
+		metaDescription,
+		metaImageLink,
+		nameOfPortfolioItem
 	} = data.contentfulPortfolioItems;
 
 	return (
 		<Layout>
+			<Seo
+				title={nameOfPortfolioItem[0].toUpperCase() + nameOfPortfolioItem.substring(1)}
+				description={metaDescription}
+				image={metaImageLink}
+			/>
 			<Col>
 				<Row>
 					<Col>

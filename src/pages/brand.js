@@ -16,15 +16,23 @@ const query = graphql`
 				}
 			}
 		}
+		allContentfulBrandPageMeta {
+			nodes {
+				metaDescription
+				metaImageLink
+			}
+		}
 	}
 `;
 
 export default function Brand() {
 	const data = useStaticQuery(query);
 
+	const { metaDescription, metaImageLink } = data.allContentfulBrandPageMeta.nodes[0];
+
 	return (
 		<Layout>
-			<Seo title="The Brand" description="hello i am des" image="https://i.ibb.co/Rc0rDCs/Ovini-com.jpg" />
+			<Seo title="The Brand" description={metaDescription} image={metaImageLink} />
 			<Col>
 				<Row className={styles.content}>
 					{data.allContentfulBrandPageContent.nodes.map((node) => (

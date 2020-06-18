@@ -1,17 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../layout/Layout';
-import { Col, Row, Carousel } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 import styles from '../templates/editorialItemPage.module.css';
-import Img from 'gatsby-image';
-import { v4 as uuidv4 } from 'uuid';
 import ImageSlider from '../imageSlider/ImageSlider';
+import Seo from '../Seo';
 
 export const query = graphql`
 	query($slug: String) {
 		contentfulEditorialItems(slug: { eq: $slug }) {
 			nameOfEditorialItem
 			slug
+			metaDescription
+			metaImageLink
 			imagesForFullEditorial {
 				fluid {
 					...GatsbyContentfulFluid
@@ -22,10 +23,20 @@ export const query = graphql`
 `;
 
 export default function EditorialItemPage({ data }) {
-	const { imagesForFullEditorial, nameOfEditorialItem } = data.contentfulEditorialItems;
+	const {
+		imagesForFullEditorial,
+		nameOfEditorialItem,
+		metaDescription,
+		metaImageLink
+	} = data.contentfulEditorialItems;
 
 	return (
 		<Layout BgColor="black" textColor="white">
+			<Seo
+				title={nameOfEditorialItem[0].toUpperCase() + nameOfEditorialItem.substring(1)}
+				description={metaDescription}
+				image={metaImageLink}
+			/>
 			<Col xs={12} className={styles.editorialItemPage}>
 				<Row className={styles.editorialItemPageRow}>
 					<Col xs={12} className={styles.h1Holder}>

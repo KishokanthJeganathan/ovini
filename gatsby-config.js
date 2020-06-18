@@ -12,7 +12,7 @@ module.exports = {
 	/* Your site config here */
 	siteMetadata: {
 		title: 'Ovini',
-		titleTemplate: '%s | ovini.com',
+		titleTemplate: '%s | Ovini',
 		description: 'Welcome to Ovini, an independent fashion label based in Melbourne, Australia',
 		siteUrl: 'https://ovini.netlify.app', // No trailing slash allowed!
 		image: 'https://i.ibb.co/Rc0rDCs/Ovini-com.jpg',
