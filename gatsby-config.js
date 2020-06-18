@@ -17,7 +17,7 @@ module.exports = {
 		siteUrl: 'https://ovini.netlify.app', // No trailing slash allowed!
 		image: 'https://i.ibb.co/Rc0rDCs/Ovini-com.jpg',
 		twitterUsername: '@kishojegan',
-		author: 'Kishokanth Jeganathan'
+		author: 'Ovini Hewawasam'
 	},
 	plugins: [
 		`gatsby-plugin-react-helmet`,
