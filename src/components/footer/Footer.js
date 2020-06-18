@@ -3,10 +3,25 @@ import styles from '../footer/footer.module.css';
 import { Row, Col } from 'react-bootstrap';
 import FooterLinks from '../../constants/FooterLinks';
 import { v4 as uuidv4 } from 'uuid';
-import { Link } from 'gatsby';
+import { Link, graphql, useStaticQuery } from 'gatsby';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
+const query = graphql`
+	query {
+		allContentfulContactUsInfo {
+			nodes {
+				emailAddress
+				phone
+			}
+		}
+	}
+`;
+
 export default function Footer({ textColor }) {
+	const data = useStaticQuery(query);
+
+	const { emailAddress, phone } = data.allContentfulContactUsInfo.nodes[0];
+
 	return (
 		<footer className={styles.footer}>
 			<Row>
@@ -36,11 +51,11 @@ export default function Footer({ textColor }) {
 							className={styles.emailAddress}
 							style={{ color: `${textColor}` }}
 						>
-							hello@ovini.com
+							{emailAddress}
 						</a>
 					</p>
 					<p className={styles.phone} style={{ color: `${textColor}` }}>
-						+48 608656435
+						{phone}
 					</p>
 					<p className={styles.phone} style={{ color: `${textColor}` }}>
 						<a
