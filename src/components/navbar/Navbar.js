@@ -12,7 +12,7 @@ export default function Navbar({ textColor, BgColor }) {
 	const [ active, setActive ] = useState(false);
 
 	return (
-		<header>
+		<header className={styles.navbar}>
 			<Col>
 				<Row>
 					<Col className={styles.fullscreenNav} style={{ backgroundColor: `${BgColor}` }}>
