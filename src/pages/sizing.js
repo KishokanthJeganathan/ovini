@@ -19,7 +19,7 @@ const query = graphql`
 
 export default function Sizing() {
 	const data = useStaticQuery(query);
-	console.log(data);
+
 	return (
 		<Layout>
 			<Col>

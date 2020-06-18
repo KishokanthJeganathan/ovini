@@ -20,7 +20,7 @@ const query = graphql`
 
 export default function Shipping() {
 	const data = useStaticQuery(query);
-	console.log(data);
+
 	return (
 		<Layout>
 			<Col>
