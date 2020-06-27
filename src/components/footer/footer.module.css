@@ -8,29 +8,6 @@
 	padding: 0;
 }
 
-.ul {
-	display: flex;
-	flex-wrap: wrap;
-	padding: 0;
-	justify-content: center;
-}
-
-.li {
-	list-style-type: none;
-	padding: 0.2rem;
-}
-
-.link {
-	color: black;
-	font-size: 0.8rem;
-	transition: color 0.3s;
-}
-
-.link:hover {
-	color: grey;
-	text-decoration: none;
-}
-
 .phone,
 .email,
 .email-address {
@@ -42,4 +19,8 @@
 
 .email-address:hover {
 	color: grey;
+}
+
+.email {
+	margin-top: 2rem;
 }

@@ -1,10 +1,8 @@
 import React from 'react';
 import styles from '../footer/footer.module.css';
 import { Row, Col } from 'react-bootstrap';
-import FooterLinks from '../../constants/FooterLinks';
 import { v4 as uuidv4 } from 'uuid';
 import { Link, graphql, useStaticQuery } from 'gatsby';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 const query = graphql`
 	query {
@@ -25,25 +23,6 @@ export default function Footer({ textColor }) {
 	return (
 		<footer className={styles.footer}>
 			<Row>
-				<Col className={styles.footerContentHolder} xs={12}>
-					<ul className={styles.ul}>
-						{FooterLinks.map((link) => (
-							<li className={styles.li} key={uuidv4()}>
-								<AniLink
-									duration={1}
-									swipe
-									top="entry"
-									entryOffset={100}
-									className={styles.link}
-									to={link.path}
-									style={{ color: `${textColor}` }}
-								>
-									{link.text}
-								</AniLink>
-							</li>
-						))}
-					</ul>
-				</Col>
 				<Col xs={12}>
 					<p className={styles.email}>
 						<a
