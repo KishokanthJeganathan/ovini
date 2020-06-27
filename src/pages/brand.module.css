@@ -2,7 +2,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-height: 90vh;
+	min-height: 80vh;
 	margin: 1rem 0rem;
 	z-index: 1;
 }
@@ -14,10 +14,4 @@ p {
 .content-holder {
 	padding: 0;
 	margin: 1rem;
-}
-
-.title {
-}
-
-.text {
 }

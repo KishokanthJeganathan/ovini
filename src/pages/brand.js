@@ -36,7 +36,7 @@ export default function Brand() {
 			<Col>
 				<Row className={styles.content}>
 					{data.allContentfulBrandPageContent.nodes.map((node) => (
-						<Col xs={11} md={5} className={styles.contentHolder}>
+						<Col xs={11} sm={7} className={styles.contentHolder}>
 							<h2 className={styles.title}>{node.tittle.toUpperCase()}</h2>
 							<p className={styles.text}>{node.content.content}</p>
 						</Col>
