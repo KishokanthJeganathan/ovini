@@ -11,11 +11,11 @@ require('dotenv').config({
 module.exports = {
 	/* Your site config here */
 	siteMetadata: {
-		title: 'Ovini',
-		titleTemplate: '%s | Ovini',
+		title: 'Ovini Studio',
+		titleTemplate: '%s | Ovini Studio',
 		description: 'Welcome to Ovini, an independent fashion label based in Melbourne, Australia',
-		siteUrl: 'https://ovini.netlify.app', // No trailing slash allowed!
-		image: 'https://i.ibb.co/Rc0rDCs/Ovini-com.jpg',
+		siteUrl: 'https://www.ovinistudio.com', // No trailing slash allowed!
+		image: 'https://ibb.co/pZVtZxK',
 		twitterUsername: '@kishojegan',
 		author: 'Ovini Hewawasam'
 	},
@@ -24,7 +24,7 @@ module.exports = {
 			resolve: `gatsby-plugin-gdpr-cookies`,
 			options: {
 				googleAnalytics: {
-					trackingId: 'UA-171046795-1', // leave empty if you want to disable the tracker
+					trackingId: process.env.GOOGLE_TRACKING_ID, // leave empty if you want to disable the tracker
 					cookieName: 'gatsby-gdpr-google-analytics', // default
 					anonymize: true, // default
 					head: true,

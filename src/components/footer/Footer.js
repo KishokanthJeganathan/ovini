@@ -5,37 +5,21 @@ import { v4 as uuidv4 } from 'uuid';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import CookieConsent from 'react-cookie-consent';
 
-const query = graphql`
-	query {
-		allContentfulContactUsInfo {
-			nodes {
-				emailAddress
-				phone
-			}
-		}
-	}
-`;
-
 export default function Footer({ textColor }) {
-	const data = useStaticQuery(query);
-
-	const { emailAddress, phone } = data.allContentfulContactUsInfo.nodes[0];
-
 	return (
 		<footer className={styles.footer}>
 			<Row>
 				<Col xs={12}>
-					<p className={styles.email}>
+					<p className={styles.phone} style={{ color: `${textColor}` }}>
 						<a
-							href="mailto:hello@ovini.com"
+							href="https://www.instagram.com/ovini.h/"
 							className={styles.emailAddress}
 							style={{ color: `${textColor}` }}
+							target="blank"
+							rel="noopener noreferrer"
 						>
-							{emailAddress}
+							Instagram
 						</a>
-					</p>
-					<p className={styles.phone} style={{ color: `${textColor}` }}>
-						{phone}
 					</p>
 					<p className={styles.phone} style={{ color: `${textColor}` }}>
 						<a
@@ -45,7 +29,7 @@ export default function Footer({ textColor }) {
 							target="blank"
 							rel="noopener noreferrer"
 						>
-							Design and Code by Kishokanth
+							Design and Development by Kishokanth
 						</a>
 					</p>
 				</Col>
