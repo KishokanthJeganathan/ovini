@@ -24,3 +24,12 @@
 .email {
 	margin-top: 2rem;
 }
+
+.privacy-policy-disclaimer {
+	padding-left: 0.3rem;
+	color: grey;
+}
+
+.privacy-policy-disclaimer:hover {
+	color: grey;
+}
