@@ -9,7 +9,7 @@ import Seo from '../components/Seo';
 
 const query = graphql`
 	query {
-		allContentfulPortfolioItems {
+		allContentfulPortfolioItems(sort: { fields: order, order: ASC }) {
 			nodes {
 				image: portfolioItemCoverPhoto {
 					fluid {

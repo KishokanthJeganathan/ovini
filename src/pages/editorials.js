@@ -8,7 +8,7 @@ import Seo from '../components/Seo';
 
 const query = graphql`
 	query {
-		allContentfulEditorialItems {
+		allContentfulEditorialItems(sort: { fields: order, order: ASC }) {
 			nodes {
 				slug
 				name: nameOfEditorialItem
