@@ -10,7 +10,7 @@ export default function Footer({ textColor }) {
 		<footer className={styles.footer}>
 			<Row>
 				<Col xs={12}>
-					<p className={styles.phone} style={{ color: `${textColor}` }}>
+					<p className={styles.email} style={{ color: `${textColor}` }}>
 						<a
 							href="https://www.instagram.com/ovini.h/"
 							className={styles.emailAddress}

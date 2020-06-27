@@ -17,12 +17,8 @@
 	text-align: center;
 }
 
-.email-address:hover {
-	color: grey;
-}
-
 .email {
-	margin-top: 2rem;
+	margin-top: 0.6rem;
 }
 
 .privacy-policy-disclaimer {
