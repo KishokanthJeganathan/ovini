@@ -17,6 +17,10 @@
 	text-align: center;
 }
 
+.email-address:hover {
+	color: black;
+}
+
 .email {
 	margin-top: 0.6rem;
 }
