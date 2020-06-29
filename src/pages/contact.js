@@ -46,7 +46,7 @@ export default function Contact() {
 							TO REQUEST FOR A CUSTOM ORDER OR COMMISSION-BASED PIECES, INQUIRE ABOUT A COLLABORATION, OR
 							SIMPLY SAY HELLO, FILL IN THE FORM BELOW.
 						</p>
-						<form action="https://formspree.io/kishokanthjeganathan@gmail.com" method="POST">
+						<form action="https://formspree.io/mjvaepdl" method="POST">
 							<label htmlFor="first name">NAME</label> <br />
 							<input type="text" name="first name" aria-label="first name" className={styles.input} />
 							<br />

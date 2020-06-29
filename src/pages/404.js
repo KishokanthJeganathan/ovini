@@ -9,7 +9,7 @@ export default function ErrorPage() {
 		<Layout>
 			<Seo
 				title="404"
-				description="Ypu appear to have stumbled onto a page that does not exsit"
+				description="You appear to have stumbled onto a page that does not exsit"
 				image="https://i.ibb.co/hgxd2Y3/Studio-Project.jpg"
 			/>
 			<Col xs={12}>
