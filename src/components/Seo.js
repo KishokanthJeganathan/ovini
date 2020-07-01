@@ -31,7 +31,7 @@ const SEO = ({ title, description, image, article }) => {
 
 			{seo.url && <meta property="og:url" content={seo.url} />}
 
-			{article ? <meta property="og:type" content="article" /> : <meta property="og:type" content="website" />}
+			{<meta property="og:type" content="website" />}
 
 			{seo.title && <meta property="og:title" content={seo.title} />}
 
