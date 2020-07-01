@@ -43,9 +43,9 @@ export default function Footer({ textColor }) {
 				acceptOnScrollPercentage={1}
 				cookieName="gatsby-gdpr-google-analytics"
 				overlay="true"
-				buttonText="Sure Thing"
+				buttonText="Sure thing"
 				buttonWrapperClasses=" text-center container"
-				// buttonStyle="primary"
+				buttonStyle={{ background: 'white', border: '1px solid grey', color: 'grey' }}
 			>
 				By browsing this website, you agree to our use of 🍪.
 			</CookieConsent>
