@@ -36,23 +36,18 @@ export default function Footer({ textColor }) {
 			</Col>
 			<CookieConsent
 				style={{ background: 'white', color: 'grey' }}
-				buttonClasses="d-none"
+				buttonClasses="m-0 d-sm-none"
 				containerClasses=" text-center "
 				expires={150}
 				acceptOnScroll={true}
 				acceptOnScrollPercentage={1}
 				cookieName="gatsby-gdpr-google-analytics"
 				overlay="true"
+				buttonText="Sure Thing"
+				buttonWrapperClasses=" text-center container"
+				// buttonStyle="primary"
 			>
 				By browsing this website, you agree to our use of 🍪.
-				<a
-					href="https://www.ovinistudio.com/privacypolicy"
-					target="_blank"
-					rel="noopener noreferrer"
-					className={styles.privacyPolicyDisclaimer}
-				>
-					here
-				</a>
 			</CookieConsent>
 		</footer>
 	);
