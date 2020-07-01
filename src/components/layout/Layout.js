@@ -8,7 +8,9 @@ export default function Layout({ children, textColor, BgColor }) {
 	return (
 		<Container fluid className={styles.layout} style={{ backgroundColor: `${BgColor}` }}>
 			<Navbar textColor={textColor} />
-			<Row>{children}</Row>
+			<main>
+				<Row>{children}</Row>
+			</main>
 			<Footer textColor={textColor} />
 		</Container>
 	);
