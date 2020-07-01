@@ -44,7 +44,7 @@ export default function Footer({ textColor }) {
 				cookieName="gatsby-gdpr-google-analytics"
 				overlay="true"
 			>
-				By browsing this website, you agree to our use of 🍪. Read more on this
+				By browsing this website, you agree to our use of 🍪.
 				<a
 					href="https://www.ovinistudio.com/privacypolicy"
 					target="_blank"
