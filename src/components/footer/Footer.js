@@ -34,20 +34,19 @@ export default function Footer({ textColor }) {
 					</Col>
 				</Row>
 			</Col>
+
 			<CookieConsent
-				style={{ background: 'white', color: 'grey' }}
-				buttonClasses="m-0 d-sm-none"
-				containerClasses=" text-center "
-				expires={150}
-				acceptOnScroll={true}
-				acceptOnScrollPercentage={1}
-				cookieName="gatsby-gdpr-google-analytics"
+				style={{ background: 'white', color: 'black' }}
+				buttonClasses="m-0 mb-1"
+				containerClasses=" text-center"
+				expires={365}
 				overlay="true"
+				cookieName="gatsby-gdpr-google-analytics"
 				buttonText="Sure thing"
-				buttonWrapperClasses=" text-center container"
-				buttonStyle={{ background: 'white', border: '1px solid grey', color: 'grey' }}
+				buttonWrapperClasses=" text-center container-fluid"
+				buttonStyle={{ background: 'white', border: '1px solid black', color: 'black' }}
 			>
-				By browsing this website, you agree to our use of 🍪.
+				Before browsing this website, please agree to our use of 🍪.
 			</CookieConsent>
 		</footer>
 	);
